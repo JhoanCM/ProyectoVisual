@@ -1,0 +1,146 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: var(--negro);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--dorado);
+    color: var(--negro);
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+#contenedor {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; 
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* Filtros */
+#filtros {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+#filtros input,
+#filtros button {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--plateado);
+    font-size: 0.9rem;
+}
+
+#filtros input {
+    flex: 1 1 120px;
+    max-width: 140px;
+}
+
+#filtros button {
+    background-color: var(--bronce);
+    color: #fff;
+    cursor: pointer;
+    flex: 0 1 auto;
+    max-width: 120px;
+}
+
+#filtros button:hover {
+    background-color: var(--oro);
+}
+
+/* Contenedor de productos */
+#contenedorProductos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+    width: 70%; /* Ajustado para que no ocupe todo el espacio */
+}
+
+/* Detalles de producto */
+.detalleProducto {
+    width: 28%; /* Ajustado para que la caja no sea tan ancha */
+    background-color: #ffffff;
+    padding: 10px; /* Reducido el padding */
+    border-radius: 5px;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+/* Imagen del producto */
+.detalleProducto img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Producto individual */
+.producto {
+    background-color: #ffffff;
+    border: 1px solid #4A148C;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    max-width: 100%;
+}
+
+.producto:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.producto img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Botones en el producto */
+.producto button {
+    background-color: #4A148C;
+    color: #ffffff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.producto button:hover {
+    background-color: #333;
+}
+
+/* Menú lateral */
+#menu-lateral {
+    width: 25%;
+    background-color: var(--negro);
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#menu-lateral h1 {
+    font-size: 1.8rem;
+    color: var(--oro);
+}

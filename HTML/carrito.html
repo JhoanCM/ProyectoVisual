@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="../CSS/carrito.css">
+</head>
+<body>
+    <header>
+        <h1>Carrito de Compras</h1>
+    </header>
+
+    <main>
+        <section class="compra-actual">
+            <div class="tabla-compra">
+                <h2>Productos Seleccionados</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio Unitario</th>
+                            <th>Total</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productosCarrito">
+                        
+                    </tbody>
+                </table>
+            </div>
+            <div class="resumen-compra">
+                <h3>Resumen de Compra</h3>
+                <p>Total de Productos: <span id="totalProductos">0</span></p>
+                <p>Total Compra: $<span id="totalCompra">0</span></p>
+                <p>Envío: $<span id="envio">15000</span></p>
+                <p>Total con Envío: $<span id="totalConEnvio">0</span></p>
+                <div class="botones-compra">
+                    <button id="regresarProductos">Seguir Comprando</button>
+                    <button id="cancelarCompra">Cancelar Compra</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="informacion-tarjeta">
+            <h2>Información de la Tarjeta</h2>
+            <form id="formTarjeta">
+                <label for="numeroTarjeta">Número de Tarjeta:</label>
+                <input type="text" id="numeroTarjeta" placeholder="XXXX-XXXX-XXXX-XXXX" required>
+
+                <label for="fechaExpiracion">Fecha de Expiración (MM/AA):</label>
+                <input type="text" id="fechaExpiracion" placeholder="MM/AA" required>
+
+                <label for="codigoSeguridad">Código de Seguridad:</label>
+                <input type="password" id="codigoSeguridad" placeholder="***" required>
+                <button type="button" onclick="verCodigo()">Ver</button>
+
+                <label for="nombreTitular">Nombre del Titular:</label>
+                <input type="text" id="nombreTitular" required>
+
+                <label for="paisEmision">País de Emisión:</label>
+                <select id="paisEmision">
+                    <option value="colombia">Colombia</option>
+                    <option value="mexico">México</option>
+                    <option value="argentina">Argentina</option>
+                    <option value="chile">Chile</option>
+                    <option value="peru">Perú</option>
+                    
+                </select>
+
+                <label for="tipoTarjeta">Tipo de Tarjeta:</label>
+                <select id="tipoTarjeta">
+                    <option value="mastercard">Mastercard</option>
+                    <option value="visa">Visa</option>
+                    <option value="prepagada">Prepagada</option>
+                </select>
+
+                <div class="botones-tarjeta">
+                    <button type="button" id="limpiarCampos">Limpiar Campos</button>
+                    <button type="submit" id="confirmarCompra">Confirmar Compra</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Accesorios para Autos</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

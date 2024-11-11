@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesorios para vehículo</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+    <header>
+        <h1>Accesorios para Tu Vehículo</h1>
+    </header>
+
+    <div id="contenedor">
+       
+        <div id="filtros" class="filtros">
+            <input type="text" id="buscador" placeholder="Buscar productos..." aria-label="Buscar productos">
+            <input type="number" id="min-precio" placeholder="Precio mínimo" aria-label="Precio mínimo">
+            <input type="number" id="max-precio" placeholder="Precio máximo" aria-label="Precio máximo">
+            <button id="filterButton" aria-label="Filtrar productos">Filtrar</button>
+            <button id="clearFilters" aria-label="Limpiar filtros">Limpiar Filtros</button>
+        </div>
+
+      
+        <div id="contenedorProductos">
+            
+        </div>
+
+       
+        <div id="detalleProducto" class="detalleProducto">
+            <h2 id="nombreProducto"></h2>
+            <img id="imagenProducto" alt="Imagen del producto">
+            <p id="descripcionProducto"></p>
+            <p>Precio: $<span id="precioProducto"></span></p>
+            <p>Cantidad disponible: <span id="cantidadProducto"></span></p>
+
+            
+            <input type="number" id="cantidadCompra" placeholder="Cantidad" aria-label="Cantidad a comprar">
+
+            
+            <button id="agregarCarritoBtn">Agregar al carrito</button>
+        </div>
+    </div>
+
+    
+    <div id="Compra">
+        <button id="CarritoCompras" onclick="location.href='Carrito.html'">Ir al Carrito</button>
+    </div>
+
+    
+    <script src="../js/carrito.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/requerimientos.js"></script>
+
+</body>
+
+</html>
